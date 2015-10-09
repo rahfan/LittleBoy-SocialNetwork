@@ -12,10 +12,10 @@
 			<h1>Social Network</h1>
 		</header>
 		<div class='w3-row'>
-			<div class='w3-col m4 l2'>
-				Arfan asri
+			<div class='w3-col m4 l2 w3-padding'>
+				Profil
 			</div>
-			<div class='w3-col m8 l10'>
+			<div class='w3-col m8 l10 w3-padding'>
 				<?PHP
 					if(isset($_GET['halaman'])) {
 						$halaman=$_GET['halaman'];

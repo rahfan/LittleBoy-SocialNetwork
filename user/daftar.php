@@ -17,7 +17,7 @@
 ?>
 
 <!-- Form untuk mendaftar user -->
-<form class='w3-container w3-card-4' method='post'>
+<form class='w3-container w3-card-4' method='post' enctype="multipart/form-data">
 	<div class='w3-group'>
 		<input class='w3-input' name='username' type='text' style='width:95%' required>
 		<label class='w3-label'>Username</label>

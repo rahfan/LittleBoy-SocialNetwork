@@ -11,14 +11,19 @@
 		$biodata = addslashes($_POST['biodata']);
 		$jeniskelamin = $_POST['jenkel'];
 		
+		//Upload gambar
+		include("uploadfoto.php");
+		
+		$foto = $username .".". $tipegambar;
+		
 		//Membuat sql untuk memasukkan ke tabel
-		$sql = "INSERT INTO user (username, password, nama, tanggal_lahir, biodata, jenis_kelamin) VALUES ('$username','$password','$nama','$tanggallahir','$biodata','$jeniskelamin')";
+		$sql = "INSERT INTO user (username, password, nama, tanggal_lahir, biodata, jenis_kelamin, foto) VALUES ('$username','$password','$nama','$tanggallahir','$biodata','$jeniskelamin','$foto')";
 		
 		//Mengecek apakah kueri sql berhasil dikerjakan
 		if(mysqli_query($koneksi, $sql)){
 			echo "User Berhasil Ditambahkan";
 		} else {
-			echo "Gagal : ".mysqli_error();
+			echo "Gagal : ".mysqli_error($koneksi);
 		}
 	}
 
